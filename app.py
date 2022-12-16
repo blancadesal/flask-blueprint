@@ -1,8 +1,11 @@
 from celery import Celery
+from flask_restful import Api
 
 from api import create_app
+from api.routes.index import Index
 
 app = create_app()
+api = Api(app)
 
 
 celery = Celery(
@@ -11,10 +14,7 @@ celery = Celery(
     backend="redis://127.0.0.1:6379/0",
 )
 
-
-@app.route("/")
-def index():
-    return "Hello, World"
+api.add_resource(Index, '/')
 
 
 @celery.task
