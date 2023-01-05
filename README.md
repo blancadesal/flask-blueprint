@@ -5,6 +5,7 @@ A dummy Flask app used to showcase how a few different concepts and building blo
 
 * Flask app creation using the [application factory pattern](https://flask.palletsprojects.com/en/2.2.x/patterns/appfactories/).
 * App modularity with [Flask Blueprints](https://flask.palletsprojects.com/en/2.2.x/blueprints/).
+* Use of[Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/), an extension for Flask that adds support for quickly building REST APIs.
 * All config separate from app logic; config storage in [environment variables](https://12factor.net/config)
 * Use of [Celery](https://docs.celeryq.dev/en/stable/) as a distributed task queue for asynchronous tasks.
 * Use of [Redis](https://docs.celeryq.dev/en/stable/getting-started/backends-and-brokers/redis.html) as both the message broker and the results backend for Celery.
